@@ -13,6 +13,10 @@ public class CheckConn {
         String username = args[2];
         String password = args[3];
 
+//        String url = "jdbc:mysql://localhost:3306/sec_user_db";
+//        String driver = "com.mysql.jdbc.Driver";
+//        String username = "root";
+//        String password = "root";
         ping(url, driver, username, password);
     }
 
@@ -22,7 +26,7 @@ public class CheckConn {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, username, password);
             if (connection != null) {
-                System.out.println("Connected to: " + url);
+                System.out.println("Connected successfully to " + url);
             }
 
         } catch (Exception e) {
