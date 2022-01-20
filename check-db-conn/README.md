@@ -7,7 +7,7 @@ A quick java tool to check the JDBC
 3. Execute the below command.
 
 ```
-java -cp "check-db-1.0.jar:./*:." "app.CheckConn" "ARG1" "ARG2" "ARG3" "ARG4"
+java -cp "./*:." "app.CheckConn" "ARG1" "ARG2" "ARG3" "ARG4"
 ```
 **ARG1**: Databases URL. E.g. *jdbc:mysql://localhost:3306/sec_user_db* 
 
@@ -19,7 +19,7 @@ java -cp "check-db-1.0.jar:./*:." "app.CheckConn" "ARG1" "ARG2" "ARG3" "ARG4"
 
 Example:
 ```
-java -cp "check-db-1.0.jar:./*:." "app.CheckConn" "jdbc:mysql://localhost:3306/sec_user_db" "com.mysql.jdbc.Driver" "root" "root"
+java -cp "./*:." "app.CheckConn" "jdbc:mysql://localhost:3306/sec_user_db" "com.mysql.jdbc.Driver" "root" "root"
 ```
 
 Below is a sample output.
