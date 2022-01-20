@@ -2,9 +2,9 @@
 A quick java tool to check the JDBC
 
 ### How To
-1. Copy the necessary JDBC driver to the root folder and execute the below command.
-
-2. Execute the below command.
+1. Download the **/app** directory
+2. Copy the necessary JDBC driver to the root folder and execute the below command.
+3. Execute the below command.
 
 ```
 java -cp "check-db-1.0.jar:./*:." "app.CheckConn" "ARG1" "ARG2" "ARG3" "ARG4"
@@ -21,3 +21,6 @@ Example:
 ```
 java -cp "check-db-1.0.jar:./*:." "app.CheckConn" "jdbc:mysql://localhost:3306/sec_user_db" "com.mysql.jdbc.Driver" "root" "root"
 ```
+
+Below is a sample output.
+![](doc.png)
