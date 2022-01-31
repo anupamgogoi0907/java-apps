@@ -42,6 +42,7 @@ public class CheckEmail {
             message.setFrom(new InternetAddress(userName));
             message.addRecipients(Message.RecipientType.TO, InternetAddress.parse(userName));
             message.setSubject("Check Email");
+            message.setText("Hello World");
             Transport.send(message);
             System.out.println("Email sent successfully.");
         } catch (Exception e) {
