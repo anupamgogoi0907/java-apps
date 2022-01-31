@@ -1,3 +1,6 @@
+### Download 
+Download the app folder and place anywhere in your system. Note that the system must have JRE installed.
+
 ### Import public certificate of SMTP Server to Java cacerts
 ```
 sudo keytool -import -file  ./smtp.cert -alias smtp -keystore /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/securitycacerts
