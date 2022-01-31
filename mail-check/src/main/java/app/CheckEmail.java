@@ -36,6 +36,7 @@ public class CheckEmail {
 
             // 2. Create Session
             session = Session.getInstance(props, authenticator);
+            session.setDebug(true);
 
             // 3. Send dummy email.
             MimeMessage message = new MimeMessage(session);
@@ -43,6 +44,7 @@ public class CheckEmail {
             message.addRecipients(Message.RecipientType.TO, InternetAddress.parse(userName));
             message.setSubject("Check Email");
             message.setText("Hello World");
+
             Transport.send(message);
             System.out.println("Email sent successfully.");
         } catch (Exception e) {
