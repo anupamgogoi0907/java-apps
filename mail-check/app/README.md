@@ -1,6 +1,6 @@
 ### Import public certificate of SMTP Server to Java cacerts
 ```
-sudo keytool -import -file  /Users/agogoi/git/anupamgogoi0907/java-apps/mail-check/app/smtp.cert -alias smtp -keystore cacerts
+sudo keytool -import -file  ./smtp.cert -alias smtp -keystore /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/securitycacerts
 ```
 Password: **changeit**
 
