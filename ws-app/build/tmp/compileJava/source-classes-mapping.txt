@@ -1,3 +1,5 @@
+app/socket/ServletAwareConfigurator.java
+ app.socket.ServletAwareConfigurator
 app/App.java
  app.App
 app/socket/DemoSocket.java
