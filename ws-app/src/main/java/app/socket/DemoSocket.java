@@ -24,7 +24,7 @@ public class DemoSocket {
     }
 
     @OnError
-    public void onError(Session session){
+    public void onError(Session session,Throwable throwable){
         System.out.println("Error");
     }
 }
