@@ -10,6 +10,12 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.springframework', name: 'spring-web', version: '3.0.2.RELEASE'
+    implementation group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '9.30.2'
+
+
+
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }

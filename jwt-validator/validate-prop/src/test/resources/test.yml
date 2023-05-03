@@ -1,0 +1,9 @@
+server:
+  ip: "10.10.10.0"
+address:
+  home:
+    street: "Rua Santa Rita de cassia"
+    number: "63"
+  office:
+    street: "Paulista"
+    number: "111"

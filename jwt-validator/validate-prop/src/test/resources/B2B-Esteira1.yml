@@ -1,0 +1,181 @@
+autodiscovery:
+  id: "![WuEzSna1XMq65/shF5dgtA==]"
+
+listener:
+  port: "8091"
+  timeout: "30000"
+
+request:
+
+  brm: #brm-sys
+    host: "mule-worker-internal-qa1-tlf-brm-sys.br-s1.cloudhub.io" # "fenix-lb-dev.telefonica.com.br"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+
+    statusUpdate:
+      path: "/serviceOrder/v1/service/statusUpdate-s"
+      wait: "5000"
+      retry: "0"
+
+    createAccount:
+      path: "/serviceOrder/v1/createAccount-s"
+      wait: "5000"
+      retry: "0"
+
+    updateAccount:
+      path: "/serviceOrder/v1/updateAccount-s"
+      wait: "5000"
+      retry: "0"
+
+    createPackage:
+      path: "/serviceOrder/v1/accounts/createPackage-s"
+      wait: "5000"
+      retry: "0"
+      
+    taxCalc:
+      path: "/product/v1/management/taxCalc-s"
+      wait: "5000"
+      retry: "0" 
+
+  kafka:
+    host: "mule-worker-internal-qa1-tlf-kafka-sys.br-s1.cloudhub.io" # "fenix-lb-dev.telefonica.com.br"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+
+    sendNotificationConnector:
+      path: "/portability/v1/sendNotificationConnector-s"
+      wait: "5000"
+      retry: "0"
+
+    createTicket:
+      path: "/portability/v1/createTicket-s"
+
+    changeTicket:
+      path: "/portability/v1/changeTicket-s"
+      wait: "5000"
+      retry: "0"
+
+  frm:
+    host: "mule-worker-internal-qa1-tlf-frm-sys.br-s1.cloudhub.io" # "fenix-lb-dev.telefonica.com.br"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    customerQuote:
+      path: "/fraud/v1/customerCreditRiskManagement/customerQuote-s"
+      wait: "5000"
+      retry: "0"
+
+  som:
+    host: "mule-worker-internal-qa1-tlf-som-sys.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+
+    sendCFS:
+      path: "/serviceOrder/v1/sendCFS-s"
+      wait: "3000"
+      retry: "0"
+
+    createPlace:
+      path: "/serviceOrder/v1/createPlace-s"
+      wait: "3000"
+      retry: "0"
+
+    sendNotificationCOM:
+      path: "/serviceOrder/v1/sendNotificationCOM-s"
+      wait: "3000"
+      retry: "0"
+
+    createCustomerContact:
+      path: "/serviceOrder/v1/createCustomerContact-s"
+      wait: "3000"
+      retry: "0"
+
+  css:
+    maxRetries: "0"
+    timeBetweenRetries: "30000"
+    port: "8091"
+    host: "mule-worker-internal-qa1-tlf-css-prc.br-s1.cloudhub.io"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    basePath: "/acceptSale/v1"
+    path:
+      viewDocument: "/viewDocument-p"
+      addSigner: "/addSigner-p"
+      sendNotification: "/sendNotification-p"
+      cancelDocument: "/cancelDocument-p"
+      removeSigner: "/removeSigner-p"
+
+  mq:
+    url: "https://mq-us-east-1.anypoint.mulesoft.com/api/v1/organizations/bda6429f-df0d-477d-80cb-e10089cffdee/environments/b71214fd-7c8b-4bb0-a971-9d172a77cd7d"
+    client_id: "![NeAEDlg4qUN8M9Ypuzmqk7AIEk7WxL+IUqjSB0gYIKgCAQ2DrK85oY1i+fdW94ho]"
+    client_secret: "![qc62e5mFAnmdmWKi7tgYG3wkRgzPEQUA3JWPGWl7/xNYCNVQY9m4wfEsJ9Lgc6RC]"
+    destination: 
+      sendDocument: "tlf-css-prc-sendDocument"
+      addSigner: "tlf-css-prc-addSigner"
+
+  simplifique:
+    host: "mule-worker-internal-qa1-tlf-spl-sys.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    queryC2:
+      path: "/creditAnalysis/v1/queryC2-s"
+      wait: "5000"
+      retry: "0"
+    queryC1:
+      path: "/creditAnalysis/v1/queryC1-s"
+      wait: "5000"
+      retry: "0"
+
+  sigseum:
+    host: "mule-worker-internal-qa1-tlf-sigseum-sys.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    carga-massiva:
+      path: "/viability/v1/carga-massiva-s"
+      wait: "5000"
+      retry: "0"
+    geocoder-carga-massiva:
+      path: "/viability/v1/geocoder-carga-massiva-s"
+      wait: "5000"
+      retry: "0"
+
+  oss:
+    host: "mule-worker-internal-qa1-tlf-oss-sys.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+
+    updateReservation:
+      path: "/serviceOrder/v1/updateReservation-s/{id}"
+      wait: "3000"
+      retry: "0"
+    consultReservation:
+      path: "/serviceOrder/v1/consultReservation-s"
+      wait: "5000"
+      retry: "0"
+
+  sigitm-sys:
+    host: "mule-worker-internal-qa1-tlf-sigitm-sys.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    troubleTicket:
+      path: "/troubleTicket/v1/troubleTicket-s"
+      wait: "5000"
+      retry: "0"
+
+  tmf685:
+    host: "mule-worker-internal-qa1-tlf-tmf685-prc.br-s1.cloudhub.io"
+    port: "8091"
+    client_id: "![uKpQBXaDcZN8CrE5ZaMWM/fTWMCMuQih0o7zZXQqbv5/uOPSunXRw/eQVCw5DxtW]"
+    client_secret: "![DikTkBGgCZby4pKcRfTQftqCCybYOM4gKZiLqZzQjd2bQaCn58/Rm1Lo5aaX+lyb]"
+    wait: "3000"
+    retry: "0"
+
+    requestReservation:
+      path: "/serviceOrder/v1/requestReservation-p"
